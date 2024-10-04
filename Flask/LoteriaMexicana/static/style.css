@@ -1,0 +1,24 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.azul {
+    background-color: #287fe4;
+}
+
+.amarillo {
+    background-color: #eadb00;
+}
+
+.rosa {
+    background-color: #dda8c4;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Visitas</title>
+</head>
+<body>
+    <h1>Has visitado esta página {{ visitas }} veces</h1>
+    <p>El contador de visitas ha sido reiniciado {{ reinicios }} veces</p>
+
+    <!-- Botón para sumar 2 visitas -->
+    <a href="/sumar2"><button>Sumar 2 Visitas</button></a>
+    
+    <!-- Botón para reiniciar el contador -->
+    <a href="/reiniciar"><button>Reiniciar Contador</button></a>
+
+    <!-- Formulario para sumar un número personalizado -->
+    <form action="/sumar" method="POST">
+        <label for="cantidad">Agregar visitas:</label>
+        <input type="number" name="cantidad" min="1" required>
+        <button type="submit">Agregar</button>
+    </form>
+
+    <!-- Botón para destruir la sesión -->
+    <a href="/destruir_sesion"><button>Eliminar Sesión</button></a>
+</body>
+</html>

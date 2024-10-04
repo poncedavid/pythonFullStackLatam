@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Configuración de los metadatos del documento HTML -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de Registro y Login</title>
+
+    <!-- Inclusión de la hoja de estilos Bootstrap desde un CDN para darle estilo a la página -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- SECCIÓN DE REGISTRO -->
+            <div class="col-6">
+                <h2>Registro</h2>
+                
+                <!-- MENSAJES DE ERROR PARA EL REGISTRO -->
+                {% with messages = get_flashed_messages(category_filter=['register']) %}
+                    {% if messages %}
+                        <div class="alert alert-danger">
+                            <!-- Mostrar los mensajes de error utilizando un bucle -->
+                            {% for message in messages %}
+                                <p>{{message}}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                {% endwith %}
+                
+                <!-- Formulario de registro -->
+                <form action="/registrar" method="POST">
+                    <div>
+                        <label>Nombre</label>
+                        <input type="text" name="nombre" class="form-control"> <!-- Campo para el nombre -->
+                    </div>
+                    <div>
+                        <label>Apellido</label>
+                        <input type="text" name="apellido" class="form-control"> <!-- Campo para el apellido -->
+                    </div>
+                    <div>
+                        <label>E-mail</label>
+                        <input type="text" name="correo" class="form-control"> <!-- Campo para el correo electrónico -->
+                    </div>
+                    <div>
+                        <label>Contraseña</label>
+                        <input type="password" name="password" class="form-control"> <!-- Campo para la contraseña -->
+                    </div>
+                    <div>
+                        <label>Confirmación</label>
+                        <input type="password" name="confirm" class="form-control"> <!-- Campo para confirmar la contraseña -->
+                    </div>
+                    <input type="submit" value="Registrarme" class="btn btn-info mt-3"> <!-- Botón para enviar el formulario -->
+                </form>
+            </div>
+            
+            <!-- SECCIÓN DE INICIO DE SESIÓN -->
+            <div class="col-6">
+                <h2>Inicio de Sesión</h2>
+                
+                <!-- MENSAJES DE ERROR PARA EL INICIO DE SESIÓN -->
+                {% with messages = get_flashed_messages(category_filter=['login']) %}
+                    {% if messages %}
+                        <div class="alert alert-danger">
+                            <!-- Mostrar los mensajes de error utilizando un bucle -->
+                            {% for message in messages %}
+                                <p>{{message}}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                {% endwith %}
+                
+                <!-- Formulario de inicio de sesión -->
+                <form action="/login" method="POST">
+                    <div>
+                        <label>E-Mail</label>
+                        <input type="text" name="correo" class="form-control"> <!-- Campo para el correo electrónico -->
+                    </div>
+                    <div>
+                        <label>Contraseña</label>
+                        <input type="password" name="password" class="form-control"> <!-- Campo para la contraseña -->
+                    </div>
+                    <input type="submit" value="Inicia Sesion" class="btn btn-primary mt-3"> <!-- Botón para enviar el formulario -->
+                </form>
+            </div>
+        </div>
+   

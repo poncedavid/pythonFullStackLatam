@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El juego del destino</title>
+</head>
+<body>
+    <h1>Formulario del destino</h1>
+    <form action="/enviar" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" required><br><br>
+
+        <label for="lugar">Lugar:</label>
+        <input type="text" name="lugar" required><br><br>
+
+        <label for="numero">Número de años:</label>
+        <input type="number" name="numero" required><br><br>
+
+        <label for="comida">Comida preferida:</label>
+        <input type="text" name="comida" required><br><br>
+
+        <label for="profesion">Profesión:</label>
+        <select name="profesion" required>
+            <option value="Ingeniero">Ingeniero</option>
+            <option value="Doctor">Doctor</option>
+            <option value="Artista">Artista</option>
+            <option value="Chef">Chef</option>
+        </select><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
