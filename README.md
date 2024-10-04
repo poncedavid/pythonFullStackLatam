@@ -35,7 +35,7 @@ Para ejecutar las asignaciones, necesitarás:
 
 1. Clona este repositorio en tu máquina local:
    ```bash
-   git clone https://github.com/tu_usuario/tu_repositorio.git
+   git clone https://github.com/poncedavid/pythonFullStackLatam.git
    ```
 2. Navega a la carpeta de la asignación que deseas ejecutar.
 3. Instala las dependencias necesarias:
@@ -60,10 +60,6 @@ python server.py
 ## Contribuciones
 
 Las contribuciones son bienvenidas. Si deseas mejorar o agregar algo al repositorio, crea un **pull request** o abre un **issue**.
-
-## Licencia
-
-Este proyecto está bajo la licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
 
 ---
 
